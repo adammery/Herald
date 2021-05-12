@@ -1,0 +1,455 @@
+$dark-10: #030c26;
+$dark-20: #001334;
+$dark-30: #041438;
+$dark-40: #001f55;
+
+$light-10: #fff;
+
+$gray-10: #525f75;
+
+$fancy-10: #02c2e8;
+$fancy-20: #156fda;
+
+$epic-10: #563a80;
+
+
+$rare-10: #8f4e33;
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 15px;
+	font-family: 'Libre Franklin', sans-serif;
+	font-weight: 400;
+	line-height: normal;
+	color: $light-10;
+	background-color: $dark-10;
+	-webkit-font-smoothing: antialiased;
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	line-height: 1.22;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	margin: 0;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+.header {
+	padding: 20px 0;
+}
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.menu {
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__logo {
+		width: 160px;
+	}
+
+	&__selector  {
+		background: $dark-30;
+		color: $light-10;
+		padding: 10px 14px 11px;
+		border-radius: 3px;
+	 	border: 0;
+		margin: 0 17px;
+		cursor: pointer;
+
+	}
+
+	&__search-wrapper {
+		position: relative;
+	}
+
+	.search {
+		background: $dark-30;
+		color: $light-10;
+		border: 0;
+		padding: 10px 36px 11px 32px;
+		border-radius: 3px;
+
+	}
+
+	&__search-icon {
+		color: $fancy-20;
+		position: absolute;
+		top: 9.7px;
+		left: 11px;
+	}
+
+	&__login {
+		margin-left: auto;
+		display: flex;
+		align-items: center;
+
+
+		padding: 10px 27px 11px;
+		border-radius: 4px;
+		font-weight: 600;
+		color: $light-10;
+		background: $fancy-10;
+		background: linear-gradient(90deg, $fancy-10 0%, $fancy-20 100%);color: $light-10;
+
+
+	}
+
+	&__login-icon {
+		margin-right: 7px;
+	}
+}
+
+.slider {
+	position: relative;
+
+	&__content {
+		position: absolute;
+		top: 175px;
+		left: 108px;
+
+	}
+
+	&__img {
+		width: 100%;
+	}
+
+	&__title {
+		font-size: 51px;
+		width: 60%;
+	}
+
+	&__text {
+		font-size: 17px;
+		width: 40%;
+		line-height: 28px;
+	}
+
+	&__button {
+		color: $fancy-10;
+		font-weight: 600;
+		font-size: 16px;
+		background: $light-10;
+		padding: 20px 54px 20px;
+		display: inline-block;
+		margin-top: 34px;
+		border-radius: 5px;
+	}
+
+	&__button:hover {
+		color: $light-10;
+		background: $fancy-10;
+	}
+}
+
+.games {
+
+	border-top: 1px solid $dark-20;
+	padding-top: 41px;
+	margin-top: 60px;
+
+
+	&__content {
+		font-size: 19px;
+		display: flex;
+		justify-content: space-between;
+		border-radius: 6px;
+		margin-bottom: 20px;
+
+		h2 {
+			font-weight: 500;
+		}
+	}
+
+		&__contents {
+		font-size: 19px;
+		display: flex;
+		justify-content: space-between;
+		border-radius: 6px;
+		margin-top: 90px;
+		margin-bottom: 20px;
+
+		h2 {
+			font-weight: 500;
+		}
+	}
+
+
+	&__button {
+		color: $light-10;
+		font-size: 16px;
+		display: inline-block;
+		border: 1px solid $dark-40;
+		padding: 11px 16px 10px;
+		border-radius: 6px;
+	}
+
+	&__button:hover {
+		background: $dark-40;
+	}
+ }
+	.box  {
+		display: flex;
+		justify-content: space-between;
+		margin: 10px -11px 0;
+
+	&__game {
+		width: 33.333%;
+		padding: 11px;
+	}
+
+	&__image {
+		width: 100%;
+		border-radius: 11px;
+		transition: transform 330ms ease;
+
+	&:hover {
+		transform: scale(1.05);
+	}
+  }
+}
+
+	.items {
+		display: flex;
+		justify-content: space-between;
+
+
+	&__item {
+		background: $dark-20;
+		width: 25%;
+		text-align: center;
+		border: 8px solid #050c23;
+		border-radius: 16px;
+		transition: transform 330ms ease;
+	}
+
+		&__item:hover {
+		transform: scale(1.03);
+		background: $dark-40;
+	 }
+
+	&__rarity-epic {
+		color: $epic-10;
+		font-weight: 600;
+		font-size: 12px;
+		text-transform: uppercase;
+		display: block;
+		margin-top: 12px;
+		margin-bottom: 2px;
+	}
+
+	&__rarity-rare {
+		color: $rare-10;
+		font-size: 12px;
+		display: block;
+		font-weight: 600;
+		margin-top: 12px;
+		margin-bottom: 2px;
+	}
+
+	&__name {
+		font-weight: 500;
+	}
+
+	&__type {
+		color: $gray-10;
+		display: block;
+		margin-top: 3px;
+		font-size: 13px;
+	}
+
+
+	&__image {
+		width: 100%;
+	}
+
+	&__image-70 {
+		width: 70%;
+	}
+
+	&__price {
+		display: block;
+		font-size: 26px;
+		font-weight: 500;
+	}
+
+	&__wear	{
+		display: block;
+		color: $gray-10;
+		margin-top: 4px;
+		margin-bottom: 7px;
+	}
+
+	&__float {
+		width: 89%;
+	}
+
+	&__button {
+		display: inline-block;
+		color: $light-10;
+		background: $fancy-10;
+		background: linear-gradient(90deg, $fancy-10 0%, $fancy-20 100%);color: $light-10;
+		padding: 10px 0 10px;
+		margin-top: 6px;
+		margin-bottom: 14px;
+		width: 80%;
+		border-radius: 5px;
+		transition: transform 500ms ease;
+
+
+
+   }
+   	&__button:hover {
+		transform: scale(1.1);
+		background: $fancy-20;
+		background: linear-gradient(90deg, $fancy-20 0%, $fancy-10 100%);color: $light-10;
+	  }
+}
+
+.market {
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid $dark-20;
+	padding-top: 44px;
+	margin-top: 80px;
+
+
+	&__boxs {
+		width: 50%;
+		position: relative;
+		margin: 0 10px;
+	}
+
+	&__img {
+		width: 100%;
+		border-radius: 13px;
+	}
+
+
+	&__icon {
+		font-size: 38px;
+		color: $fancy-20;
+		margin-right: 8px;
+	}
+
+	&__content {
+		position: absolute;
+		display: flex;
+		top: 40px;
+		left: 40px;
+		width: 40%;
+		flex-direction: column;
+		justify-content: space-between;
+
+	}
+
+	&__title {
+		font-size: 30px;
+		font-weight: 500;
+	}
+
+	&__text {
+		font-weight: 300;
+		font-size: 16px;
+		margin-top: 27px;
+		line-height: 25px;
+	}
+
+	&__button {
+		padding: 12px 0 12px;
+		text-align: center;
+		background: $fancy-10;
+		background: linear-gradient(90deg, $fancy-10 0%, $fancy-20 100%);color: $light-10;
+		margin-top: 103px;
+		border-radius: 5px;
+		transition: transform 500ms ease;
+
+		a {
+			color: $light-10;
+			display: inline-block;
+		}
+	}
+		&__button:hover {
+		transform: scale(1.13);
+		background: $fancy-20;
+		background: linear-gradient(90deg, $fancy-20 0%, $fancy-10 100%);color: $light-10;
+	  }
+}
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding-top: 29px;
+
+		&__logo {
+		width: 160px;
+	}
+
+	&__link {
+		display: block;
+		padding: 2px 0;
+		color: $gray-10;
+	}
+
+	&__title {
+		font-size: 15px;
+		font-weight: 300;
+		margin-bottom: 8px;
+	}
+
+	&__icon-link {
+		color: $fancy-20;
+		font-size: 26px;
+		margin-right: 6px;
+	}
+
+	&__icon:hover {
+		color: $fancy-10;
+		transition: transform 300ms ease;
+		transform: scale(1.11);
+	}
+
+
+	&__partner {
+		display: inline-block;
+		width: 48%;
+	}
+}
+.copy {
+	color: $gray-10;
+	margin-bottom: 8px;
+	opacity: 0.5;
+}
